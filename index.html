@@ -12,9 +12,18 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- 구글 폰트 적용 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
-    <!--main.css -->
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- google material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!--데스크탑 버전-->
+    <link rel="stylesheet" href="./css/desktop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- main.js의 연결 -->
     <script defer src="./js/main.js"></script>
+    
+    
 
 </head>
 <body>
@@ -23,80 +32,91 @@
             <div class="header_contents">
             <!-- 로고이미지에 링크걸기 -->
                 <div class="Main_logo">
-                    <a href="http://tigersugarkr.com"><img src="http://tigersugarkr.com/theme/basic/img/logo1.png" alt="Main_logo"></a>
+                    <a href="http://tigersugarkr.com"><img src="./images/logo1.png" alt="Main_logo"></a>
                 </div>
+                <!-- 햄버거 메뉴-->
+                <!-- 데스크탑, 모바일에서만 보임 -->
+                <span id = "btn--open" class="hamburger_icon"></span>
+                <!-- 닫는 아이콘 -->
+                <span id = "btn--close" class="close_icon"></span>
             <!-- NAV MENU -->
-        <nav class="nav__menu">
-            <div class="menulist">
-                <a href="http://tigersugarkr.com/bbs/content.php?co_id=brand" class="yellow">BRAND</a>
-                
-                    <div class="item-contents">
-                        <ul>
-                            <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=brand">브랜드 소개</a></li>
-                            <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=world">글로벌<br>타이거슈가</a></li>
-                        </ul>
-                    </div>        
-            </div>            
-            <div class="menulist">
-                <a href="http://tigersugarkr.com/bbs/content.php?co_id=representation_menu" class="yellow">MENU</a>
-                    <div class="item-contents">
-                        <ul>
-                            <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=representation_menu">흑당버블밀크티</a></li>
-                            <li><a href="http://tigersugarkr.com/bbs/board.php?bo_table=all_menu">전메뉴 소개</a></li>
-                        </ul>
-                    </div>
+            <!-- 데스크탑 버전 -->
+                <nav class="nav__menu">
+                    <div class="menulist">
+                        <a href="http://tigersugarkr.com/bbs/content.php?co_id=brand" class="yellow">BRAND</a>
+                        <a href="http://tigersugarkr.com/bbs/content.php?co_id=representation_menu" class="yellow">MENU</a>
+                        <a href="http://tigersugarkr.com/bbs/board.php?bo_table=store" class="yellow">STORE</a>
+                        <a href="http://tigersugarkr.com/bbs/board.php?bo_table=event" class="yellow">EVENT & NEWS</a>
+                        <a href="http://tigersugarkr.com/bbs/content.php?co_id=improvement" class="grey">창업안내</a>
+                        <a href="http://tigersugarkr.com/bbs/write.php?bo_table=senter" class="grey">고객센터</a>
+                    </div>    
+                </nav>
             </div>
-            <div class="menulist">
-                <a href="http://tigersugarkr.com/bbs/board.php?bo_table=store" class="yellow">STORE</a>
-                    <div class="item-contents">
-                        <ul>
-                            <li><a href="http://tigersugarkr.com/bbs/board.php?bo_table=store">매장안내</a></li>
-                        </ul>
-                    </div>
-            </div>
-            <div class="menulist">
-                <a href="http://tigersugarkr.com/bbs/board.php?bo_table=event" class="yellow">EVENT & NEWS</a>
-                    <div class="item-contents">
-                        <ul>
-                            <li><a href="http://tigersugarkr.com/bbs/board.php?bo_table=notice">소식&공지</a></li>
-                            <li><a href="http://tigersugarkr.com/bbs/board.php?bo_table=media">언론보도</a></li>
-                            <li><a href="https://www.instagram.com/krtigersugar/?hl=ko" target="_blank">SNS</a></li>
-                        </ul>
-                    </div>
-            </div>
-            <div class="menulist">
-                <a href="http://tigersugarkr.com/bbs/content.php?co_id=improvement" class="grey">창업안내</a>
-                    <div class="item-contents">   
-                        <ul>
-                            <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=compete">개설안내</a></li>
-                            <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=improvement">개설절차</a></li>
-                            <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=equipment">개설비용</a></li>
-                            <li><a href="http://tigersugarkr.com/bbs/write.php?bo_table=consulte">상담신청</a></li>
-                        </ul>
-                    </div>
-            </div>
-            <div class="menulist">
-                <a href="http://tigersugarkr.com/bbs/write.php?bo_table=senter" class="grey">고객센터</a>
-                    <div class="item-contents">   
-                        <ul>
-                            <li><a href="http://tigersugarkr.com/bbs/write.php?bo_table=senter">고객의소리 접수</a></li>
-                        </ul>
-                    </div>
-            </div>
-        
-        </nav>   
-    </div>
-    
         </header>
+               
+                <div class="wrapper-content">
+                    <ul>
+                        <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=brand" class="brand">브랜드 소개</a></li>
+                        <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=world" class="brand">글로벌<br>타이거슈가</a></li>                
+                    </ul>                
+                    <ul >
+                        <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=representation_menu" class="menu">흑당버블밀크티</a></li>
+                        <li><a href="http://tigersugarkr.com/bbs/board.php?bo_table=all_menu" class="menu">전메뉴 소개</a></li>
+                    </ul>
+                    <ul >
+                        <li><a href="http://tigersugarkr.com/bbs/board.php?bo_table=store" class= "store">매장안내</a></li>
+                    </ul>
+                    <ul >
+                        <li><a href="http://tigersugarkr.com/bbs/board.php?bo_table=notice" class= "event_news">소식&공지</a></li>
+                        <li><a href="http://tigersugarkr.com/bbs/board.php?bo_table=media" class= "event_news">언론보도</a></li>
+                        <li><a href="https://www.instagram.com/krtigersugar/?hl=ko" class= "event_news" target="_blank">SNS</a></li>
+                    </ul>
+                    <ul >
+                        <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=compete" class = "business">개설안내</a></li>
+                        <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=improvement" class = "business">개설절차</a></li>
+                        <li><a href="http://tigersugarkr.com/bbs/content.php?co_id=equipment" class = "business">개설비용</a></li>
+                        <li><a href="http://tigersugarkr.com/bbs/write.php?bo_table=consulte" class = "business">상담신청</a></li>
+                    </ul>
+                    <ul >
+                        <li><a href="http://tigersugarkr.com/bbs/write.php?bo_table=senter" class = "customer_survice">고객의소리 접수</a></li>
+                    </ul>
+                    <p>고객센터 : <strong>070-4481-8804</strong> (운영 : 평일 9시-18시 / 점심 12시-13시, 휴일 : 주말 및 공휴일 휴무)</p>
+                </div>
+    </div>       
+        
 <!-- MAIN SECTION -->
-<div class="Main_Container">
-    <div class="slide_wrapper">
-        <div class="slide">
-            <img src="http://tigersugarkr.com/img/idx_visual_slide1.jpg" alt="slide1">
-            <div class="slideOption">
-                <div class="slide_left"></div>
-                <div class="slide_right"></div>
-            </div>
+<!-- MAIN SWIPER -->
+<div class="swiper-container mainSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+          <img src="http://tigersugarkr.com/img/idx_visual_slide1.jpg" alt="" class="pc">
+      </div>
+      <div class="swiper-slide">
+          <img src="http://tigersugarkr.com/img/idx_visual_slide2.jpg" alt="" class="pc">
+      </div>
+      <div class="swiper-slide">
+        <img src="http://tigersugarkr.com/img/idx_visual_slide3.jpg" alt="" class="pc">
+      </div>
+      <div class="swiper-slide">
+        <img src="http://tigersugarkr.com/img/idx_visual_slide4.jpg" alt="" class="pc">
+      </div>
+      <div class="swiper-slide">
+        <img src="http://tigersugarkr.com/img/idx_visual_slide5.jpg" alt="" class="pc">
+      </div>
+      <div class="swiper-slide">
+        <img src="http://tigersugarkr.com/img/idx_visual_slide6.jpg" alt="" class="pc">
+      </div>
+      <div class="swiper-slide">
+        <img src="http://tigersugarkr.com/img/idx_visual_slide7.jpg" alt="" class="pc">
+      </div>
+    </div>
+</div>
+    <div class="slideOption">
+    <div class="slide_left"></div>
+    <div class="slide_right"></div>
+    </div>  
+  
+
 <!-- MIND SECTION -->
 <div id="section1">
     <div class= "mind">
@@ -112,18 +132,154 @@
             <h2>MENU</h2>
             <p class="subTitle">신선함과 정성을 담아 만든 소중한 한잔</p>
         </div>
-        <div class="MenuSlide">
-            <div class="imgWrap">
-                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-133_copy_138_128_copy_133_118_copy_128_100_copy_118_2038657375_CSvMYXNq_ee634ce4a406a595dca519b1d52acc39b3e58d7c_210x290.png" alt="흑당크림카페라떼">
-                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_I8kHrdam_de3ca3d08082c8ee9d5969b98b0f4b2bfc4f2e22_210x290.png" alt="제주 말차라떼">
-                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_NnMpq0rh_8bf602430645f7e25fb685f24438747e2ee94ea0_210x290.png" alt="크림치즈말차밀크티">
-                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_eMkLOxyj_4dd73c53c59c64ecd8e89ca114771af18eef5403_210x290.png" alt="제주 말차 밀크티">
-                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_RYG8cprB_126f1e04f2fe28e1cf251d719443332b0bdd6933_210x290.png" alt="크림치즈흑당딥초코밀크티">
-                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_hQRI7xP1_85d5ef3eefa0f7a63972827d8c0cd56381b8b65c_210x290.png" alt="흑당딥초코밀크티">
-                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-59_copy_143_48_copy_59_2038657375_lrotscgE_8e7519fa4d9ee16956fc05b3ffaa5cb813fdedef_210x290.png" alt="흑당버블밀크티">
-                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-124_copy_142_2943364042_F3fP5JEU_3fbc52f7ccd43722a58a6a7e231f98efc6c9209f_210x290.png" alt="타로밀크티">
-                
-            </div>          
+        <div class="swiper-container menuSlide">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_wSX75xZU_8bdfb593c0ed6082ca903c0653edb48cffdd4564_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>호랑이 모찌 밀크티<span>Tiger Mochi Milktea</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_I8kHrdam_de3ca3d08082c8ee9d5969b98b0f4b2bfc4f2e22_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>제주 말차라떼<span>Jeju Matcha Latte</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_NnMpq0rh_8bf602430645f7e25fb685f24438747e2ee94ea0_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>크림치즈 말차 밀크티<span>Matcha Milk Tea w Cream Cheese Mousse</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_eMkLOxyj_4dd73c53c59c64ecd8e89ca114771af18eef5403_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>제주 말차 밀크티<span>Jeju Matcha Milk Tea</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_RYG8cprB_126f1e04f2fe28e1cf251d719443332b0bdd6933_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>크림치즈 흑당딥초코밀크티<span>Cream Cheese Mousse w Black Sugar Deep Choco Milk
+                                            Tea</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_hQRI7xP1_85d5ef3eefa0f7a63972827d8c0cd56381b8b65c_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>흑당딥초코밀크티<span>Black Sugar Deep Chocolate Milk Tea</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-59_copy_143_48_copy_59_2038657375_lrotscgE_8e7519fa4d9ee16956fc05b3ffaa5cb813fdedef_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>흑당버블밀크티<span>Black sugar milk tea</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-124_copy_142_2943364042_F3fP5JEU_3fbc52f7ccd43722a58a6a7e231f98efc6c9209f_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>타로밀크티<span>Taro Milk Tea</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-125_copy_141_2943364042_tKTJdEF2_00ebda5a6696d4819c15ab32486e389cef8252a8_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>타로티라미수<span>Taro Tiramisu</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-137_copy_139_132_copy_137_127_copy_132_2038657375_m8Vb6reZ_4e710f972b6e1e1e829590ba3a70b4b13cf33bb1_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>흑당카페모카<span>Black Sugar Café Mocha</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_ECJ8Poea_161b051df0eda5dac3c44638770214cacc95fb2c_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>MINI 흑당 크림 찹쌀 롤케이크<span>Mini Black Sugar Cream Chapssaltteok Cake</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="slideWrap">
+                        <a href="#">
+                            <div class="imgWrap">
+                                <img src="http://tigersugarkr.com/data/file/all_menu/thumb-2038657375_3RetXVK2_0647ce7bf57d29a4eb20ac6cff6b0bdc2e59b33d_210x290.png" alt="">
+                                <div class="menuBg">
+                                    <h3>ICE 흑당 크림 찹쌀떡<span>Ice Black Sugar Cream Chapssaltteok</span></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
@@ -150,57 +306,100 @@
             <h2>COMMUNICATION</h2>
             <p class="subTitle">트랜드를 주도하며 고객과 소통하는 공간</p>
         </div>
-        <div class="communication_slide">
-            <div class="img_wrap">
-                <a href="https://www.instagram.com/p/CM4AcG5HZ2i/?utm_source=ig_web_copy_link" target="_blank">
-                    <i>
-                        <img src="http://tigersugarkr.com/img/ico_instagram.png" alt="">
-                    </i>
-                    <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_X4z1fAov_83ca795e0af9135584ad721b5a0dc0de742993a2_270x270.png" alt="">        
-                </a>
-            </div>
-            <div class="img_wrap">
-                <a href="https://www.instagram.com/p/CMs7LAJnoUr/?utm_source=ig_web_copy_link" target="_blank">
-                    <i>
-                        <img src="http://tigersugarkr.com/img/ico_instagram.png" alt="">
-                    </i>
-                    <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_2w3BFqvk_71dfe13b53fa50670ab1d55128ae32f1c260deb0_270x270.png" alt="">        
-                </a>
-            </div>
-            <div class="img_wrap">
-                <a href="https://www.instagram.com/p/CMl-LyWnVcz/?utm_source=ig_web_copy_link" target="_blank">
-                    <i>
-                        <img src="http://tigersugarkr.com/img/ico_instagram.png" alt="">
-                    </i>
-                    <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_8Z4L7ihP_33336b36b6826e4fb266b242f966081918c0c299_270x270.png" alt="">        
-                </a>
-            </div>
-            <div class="img_wrap">
-                <a href="https://www.instagram.com/p/CMg9yfOHIqP/?utm_source=ig_web_copy_link" target="_blank">
-                    <i>
-                        <img src="http://tigersugarkr.com/img/ico_instagram.png" alt="">
-                    </i>
-                    <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_Hl67I12Q_4e92461c95044c9fca646b16db6482fc2d41ddb8_270x270.png" alt="">        
-                </a>
-            </div>
-            <div class="img_wrap">
-                <a href="https://www.instagram.com/p/CMT7lvFHSs4/?utm_source=ig_web_copy_link" target="_blank">
-                    <i>
-                        <img src="http://tigersugarkr.com/img/ico_instagram.png" alt="">
-                    </i>
-                    <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_lG0JoFH3_6c27b5b4a9f2f3a80dc946277e6ae7f731087e86_270x270.png" alt="">        
-                </a>
-            </div>
-            <div class="img_wrap">
-                <a href="https://www.instagram.com/p/CM_srLpHVWL/?utm_source=ig_web_copy_link" target="_blank">
-                    <i>
-                        <img src="http://tigersugarkr.com/img/ico_instagram.png" alt="">
-                    </i>
-                    <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_LJG7cHuQ_e1765dd672d00dfcd273f3d97a5c27bc36d2a9cf_270x270.png" alt="">        
-                </a>
+        <!-- communication_slide  -->
+    <div class="swiper-container communication_slide">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="imgWrap">
+                    <a href="#">
+                        <i><img src="http://tigersugarkr.com/img/ico_instagram.png" alt=""></i>
+                        <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_LJG7cHuQ_e1765dd672d00dfcd273f3d97a5c27bc36d2a9cf_270x270.png" alt="">
+                    </a>
+                </div>
             </div>
 
+            <div class="swiper-slide">
+                <div class="imgWrap">
+                    <a href="#">
+                        <i><img src="http://tigersugarkr.com/img/ico_instagram.png" alt=""></i>
+                        <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_X4z1fAov_83ca795e0af9135584ad721b5a0dc0de742993a2_270x270.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgWrap">
+                    <a href="#">
+                        <i><img src="http://tigersugarkr.com/img/ico_instagram.png" alt=""></i>
+                        <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_2w3BFqvk_71dfe13b53fa50670ab1d55128ae32f1c260deb0_270x270.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgWrap">
+                    <a href="#">
+                        <i><img src="http://tigersugarkr.com/img/ico_instagram.png" alt=""></i>
+                        <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_8Z4L7ihP_33336b36b6826e4fb266b242f966081918c0c299_270x270.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgWrap">
+                    <a href="#">
+                        <i><img src="http://tigersugarkr.com/img/ico_instagram.png" alt=""></i>
+                        <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_Hl67I12Q_4e92461c95044c9fca646b16db6482fc2d41ddb8_270x270.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgWrap">
+                    <a href="#">
+                        <i><img src="http://tigersugarkr.com/img/ico_instagram.png" alt=""></i>
+                        <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_QNFohmCw_fd00543267435729d097e720a27f6659eeb10610_270x270.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgWrap">
+                    <a href="#">
+                        <i><img src="http://tigersugarkr.com/img/ico_instagram.png" alt=""></i>
+                        <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_lG0JoFH3_6c27b5b4a9f2f3a80dc946277e6ae7f731087e86_270x270.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgWrap">
+                    <a href="#">
+                        <i><img src="http://tigersugarkr.com/img/ico_instagram.png" alt=""></i>
+                        <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_eZ2u1QSJ_fe93a6c3d7d30bf52c3a2ab0c62503ba3300fefa_270x270.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgWrap">
+                    <a href="#">
+                        <i><img src="http://tigersugarkr.com/img/ico_instagram.png" alt=""></i>
+                        <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_8G5DxwHz_ee255ff7f1f8b3c0667f11cc3510038fc5d513eb_270x270.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgWrap">
+                    <a href="#">
+                        <i><img src="http://tigersugarkr.com/img/ico_instagram.png" alt=""></i>
+                        <img src="http://tigersugarkr.com/data/file/instar/thumb-2038657375_qCdhfSsQ_eecebd43613a1fee3a3c69c42c3c04288122e78e_270x270.png" alt="">
+                    </a>
+                </div>
+            </div>
         </div>
+    </div>
     </div>    
 </div>
 <!-- FOOTER -->
@@ -236,11 +435,10 @@
         </a>
         <div class="scroll_image"></div>
     </div>
+    <div class="goTop">
+        <img class = "btn--scrollToTop" src="images\gotop.png">
+    </div>
 </div>
-</div>
-        </div>               
-    </div>                
-</div>              
 </body>
 
 </html>
